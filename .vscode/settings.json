@@ -1,0 +1,22 @@
+{
+    "workbench.colorCustomizations": {
+         // === STANDARDIZED CENTRAL FOCUS ZONE ===
+        "editor.background": "#14161a",
+        "panel.background": "#14161a",
+        "panel.border": "#1e222b",
+        "panelTitle.activeForeground": "#ffffff",
+        "panelTitle.activeTextBorder": "#4facfe",
+
+        // === PROJECT IDENTIFIER (OCEAN BLUE) ===
+        "titleBar.activeBackground": "#14161a",
+        "titleBar.activeForeground": "#4facfe",
+        "activityBar.background": "#0c2540",
+        "activityBar.foreground": "#4facfe",
+        "activityBar.inactiveForeground": "#5c7080",
+        "statusBar.background": "#0052cc",
+        "statusBar.foreground": "#ffffff",
+        "sideBar.background": "#111317",
+        "tab.activeBorderTop": "#4facfe"
+    }
+
+}
