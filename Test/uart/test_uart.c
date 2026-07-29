@@ -1,0 +1,69 @@
+#include "unity.h"
+#include "string.h"
+
+#include "mcal_uart.h"
+
+/* Target source file for testing
+ * mcal_uart_<target>.c
+ */
+TEST_SOURCE_FILE("mcal_uart_stm32.c")
+
+void setUp(void)
+{
+    // This runs before every single test
+}
+
+void tearDown(void)
+{
+    // This runs after every single test
+}
+
+
+void test_uart_driver_init(void)
+{
+    UART_HandleTypeDef huart1;
+    UART_HandleTypeDef huart2;
+
+    uart_driver_init(&huart1, UART_CH_1);
+    uart_driver_init(&huart2, UART_CH_2);
+
+    // Verify that the handles are stored correctly
+    TEST_ASSERT_EQUAL_PTR(&huart1, uartHandle[UART_CH_1]);
+    TEST_ASSERT_EQUAL_PTR(&huart2, uartHandle[UART_CH_2]);
+}
+
+void test_uart_driver_write_success(void)
+{
+    UART_HandleTypeDef huart;
+    uart_driver_init(&huart, UART_CH_1);
+
+    const uint8_t data[] = "Hello, UART!";
+    bool result = uart_driver_write(UART_CH_1, data, sizeof(data) - 1);
+
+    // Verify that the write operation was successful
+    TEST_ASSERT_TRUE(result);
+}
+
+void test_uart_driver_write_null_handle(void)
+{
+    // UART Initialization is not done for UART_CH_1, so the handle is NULL
+
+    const uint8_t data[] = "Hello, UART!";
+    bool result = uart_driver_write(UART_CH_1, data, sizeof(data) - 1);
+
+    // Verify that the write operation fails when the handle is NULL
+    TEST_ASSERT_FALSE(result);
+}
+
+void test_uart_driver_write_invalid_channel(void)
+{
+    UART_HandleTypeDef huart;
+    uart_driver_init(&huart, UART_CH_1);
+
+    const uint8_t data[] = "Hello, UART!";
+    bool result = uart_driver_write((UART_Channel_t)99, data, sizeof(data) - 1); // Invalid channel
+
+    // Verify that the write operation fails for an invalid channel
+    TEST_ASSERT_FALSE(result);
+}
+
