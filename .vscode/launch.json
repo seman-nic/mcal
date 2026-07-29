@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // CAN Debug configuration
+        {
+            "name": "CAN Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/can/test/out/${fileBasenameNoExtension}/${fileBasenameNoExtension}.out",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "Ceedling: Compile CAN"
+        },
+        // CAN Run Test configuration
+        {
+            "name": "CAN Test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "ceedling",
+            "args": [
+                "-m",
+                "project_can",
+                "test:${fileBasenameNoExtension}"
+            ],
+            "noDebug": true
+        }
+    ]
+}

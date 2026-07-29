@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Ceedling: Compile CAN",
+            "type": "shell",
+            "command": "ceedling",
+            "args": [
+                "-m",
+                "project_can",
+                "test:${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
