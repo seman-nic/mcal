@@ -19,7 +19,6 @@
   :use_decorators: :auto         # decorate Ceedling's output text. options are :auto, :all, or :none
 
   # tweak the way ceedling handles automatic tasks
-  :build_root: build/uart
   :test_file_prefix: test_
   :default_tasks:
     - test:all
