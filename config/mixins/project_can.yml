@@ -32,15 +32,6 @@
   # enable release build (more details in release_build section below)
   :release_build: FALSE
 
-# Specify where to find mixins and any that should be enabled automatically
-:mixins:
-  :enabled: 
-    - project_can
-    # - uart.yml
-  :load_paths:
-    - config/mixins
-  
-
 # further details to configure the way Ceedling handles test code
 :test_build:
   :use_assembly: FALSE
@@ -409,19 +400,3 @@
 #     :name: 
 #     :optional: FALSE
 ...
-
-# :defines:
-#   :test:
-#     - +:TEST2
-
-# :define:
-#   +:test:
-#     - +:Test/can/**
-#   +:source:
-#     - +:CAN/src/**
-#   +:include:
-#     - +:CAN/inc/** # In simple projects, this entry often duplicates :source
-#     - +:MCU/STM32F4xx/STM32F4xx_HAL_Driver/Inc
-#     - +:MCU/STM32F4xx/CMSIS/Device/ST/STM32F4xx/Include
-#     - +:MCU/STM32F4xx/CMSIS/Include
-#     - +:MCU/STM32F4xx/Core/Inc

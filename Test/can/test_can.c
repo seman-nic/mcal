@@ -3,7 +3,9 @@
 
 #include "mcal_can.h"
 
-// Target source file for testing
+/* Target source file for testing
+ * mcal_can_<target>.c
+ */
 TEST_SOURCE_FILE("mcal_can_stm32.c")
 
 static HAL_StatusTypeDef g_hal_status;
