@@ -1,0 +1,15 @@
+---
+
+:paths:
+  :test:
+    - +:unittest/test/uart/**
+  :source:
+    - +:UART/src/**
+  :include:
+    - +:UART/inc/**
+    - +:unittest/MCU/STM32F4xx/STM32F4xx_HAL_Driver/Inc
+    - +:unittest/MCU/STM32F4xx/CMSIS/Device/ST/STM32F4xx/Include
+    - +:unittest/MCU/STM32F4xx/CMSIS/Include
+    - +:unittest/MCU/STM32F4xx/Core/Inc
+
+...
