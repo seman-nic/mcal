@@ -8,8 +8,8 @@
         "panelTitle.activeTextBorder": "#4facfe",
 
         // === PROJECT IDENTIFIER (OCEAN BLUE) ===
-        "titleBar.activeBackground": "#14161a",
-        "titleBar.activeForeground": "#4facfe",
+        "titleBar.activeBackground": "#7eb8eb",
+        "titleBar.activeForeground": "#14161a",
         "activityBar.background": "#0c2540",
         "activityBar.foreground": "#4facfe",
         "activityBar.inactiveForeground": "#5c7080",
