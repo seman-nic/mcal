@@ -8,9 +8,29 @@
  */
 TEST_SOURCE_FILE("mcal_uart_stm32.c")
 
+extern UART_HandleTypeDef *uartHandle[];
+
+HAL_StatusTypeDef HAL_UART_Transmit ( UART_HandleTypeDef *huart, 
+                                      const uint8_t *pData,
+                                      uint16_t Size,
+                                      uint32_t Timeout)
+{
+
+    return HAL_OK;
+}
+
+void clear_uart_handle(void)
+{
+    for (size_t i = 0; i < UART_MAX_CH_NUMBER; i++)
+    {
+        uartHandle[i] = NULL;
+    }
+}
+
 void setUp(void)
 {
     // This runs before every single test
+    clear_uart_handle();
 }
 
 void tearDown(void)
