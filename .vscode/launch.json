@@ -9,7 +9,7 @@
             "name": "CAN Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/can/test/out/${fileBasenameNoExtension}/${fileBasenameNoExtension}.out",
+            "program": "${workspaceFolder}/build/mcal/test/out/${fileBasenameNoExtension}/${fileBasenameNoExtension}.out",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
@@ -30,6 +30,34 @@
                 "test:${fileBasenameNoExtension}"
             ],
             "noDebug": true
+        },
+        // UART Debug configuration
+        {
+            "name": "UART Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/mcal/test/out/${fileBasenameNoExtension}/${fileBasenameNoExtension}.out",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "Ceedling: Compile UART"
+        },
+        // UART Run Test configuration
+        {
+            "name": "UART Test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "ceedling",
+            "args": [
+                "-m",
+                "project_uart",
+                "test:${fileBasenameNoExtension}"
+            ],
+            "noDebug": true
         }
+
     ]
 }

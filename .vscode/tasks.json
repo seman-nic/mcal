@@ -12,6 +12,18 @@
             ],
             "group": "build",
             "problemMatcher": []
+        },
+        {
+            "label": "Ceedling: Compile UART",
+            "type": "shell",
+            "command": "ceedling",
+            "args": [
+                "-m",
+                "project_uart",
+                "test:${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": []
         }
     ]
 }
