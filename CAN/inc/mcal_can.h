@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#include "stm32f4xx_hal_can.h"
+#include "stm32f4xx_hal.h"
 
 typedef struct {
     uint32_t id;
